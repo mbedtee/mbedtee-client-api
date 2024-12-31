@@ -113,7 +113,7 @@ static int teec_open_dev(const char *devname, const char *capabilities,
 				goto err;
 			if (!(vers.impl_caps & TEE_OPTEE_CAP_TZ))
 				goto err;
-		} if (strcmp(capabilities, "mbedtee") == 0) {
+		} else if (strcmp(capabilities, "mbedtee") == 0) {
 			if (vers.impl_id != TEE_IMPL_ID_MBEDTEE)
 				goto err;
 		} else {

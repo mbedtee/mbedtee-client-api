@@ -1,7 +1,5 @@
-#
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: BSD-2-Clause
 # Copyright (c) 2019 KapaXL (kapa.xl@outlook.com)
-#
 
 CC = $(CROSS_COMPILE)gcc
 STRIP = $(CROSS_COMPILE)strip

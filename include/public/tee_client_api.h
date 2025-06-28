@@ -162,16 +162,16 @@ extern "C" {
  *                              User Interface operation to be aborted.
  * TEEC_ERROR_EXTERNAL_CANCEL   Deprecated: not specified in client API, use
  *                              TEE_ERROR_EXTERNAL_CANCEL intead.
- * TEE_ERROR_OVERFLOW           Internal TEE error 每 documented for completeness
+ * TEE_ERROR_OVERFLOW           Internal TEE error -- documented for completeness
  * TEE_ERROR_TARGET_DEAD        The Trusted Application has terminated.
  * TEEC_ERROR_TARGET_DEAD       The Trusted Application has terminated.
- * TEE_ERROR_STORAGE_NO_SPACE   Internal TEE error 每 documented for completeness
+ * TEE_ERROR_STORAGE_NO_SPACE   Internal TEE error -- documented for completeness
  * TEEC_ERROR_STORAGE_NO_SPACE  Deprecated: not specified in client API, use
  *                              TEE_ERROR_STORAGE_NO_SPACE instead.
- * TEE_ERROR_MAC_INVALID        Internal TEE error 每 documented for completeness
- * TEE_ERROR_SIGNATURE_INVALID  Internal TEE error 每 documented for completeness
- * TEE_ERROR_TIME_NOT_SET       Internal TEE error 每 documented for completeness
- * TEE_ERROR_TIME_NEEDS_RESET   Internal TEE error 每 documented for completeness
+ * TEE_ERROR_MAC_INVALID        Internal TEE error -- documented for completeness
+ * TEE_ERROR_SIGNATURE_INVALID  Internal TEE error -- documented for completeness
+ * TEE_ERROR_TIME_NOT_SET       Internal TEE error -- documented for completeness
+ * TEE_ERROR_TIME_NEEDS_RESET   Internal TEE error -- documented for completeness
  */
 
 /**

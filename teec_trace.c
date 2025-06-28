@@ -53,7 +53,7 @@ static void log_to_file(const char *buffer)
 {
 	FILE *log_file = fopen(TEEC_LOG_FILE, "a");
 
-	if (log_file != NULL) {
+	if (log_file) {
 		fprintf(log_file, "%s", buffer);
 		fclose(log_file);
 		log_file = NULL;
@@ -106,7 +106,7 @@ void dump_buffer(const char *bname, const uint8_t *buffer, size_t blen)
 
 		for (n = 0; n < 16; n++) {
 			if (n < blen)
-				fprintf(stderr, "%02x ", (int)buffer[n]);
+				fprintf(stderr, "%02x ", buffer[n]);
 			else
 				fprintf(stderr, "   ");
 
@@ -119,7 +119,7 @@ void dump_buffer(const char *bname, const uint8_t *buffer, size_t blen)
 		for (n = 0; n < 16; n++) {
 			if (n < blen) {
 				if (isprint(buffer[n]))
-					fprintf(stderr, "%c", (int)buffer[n]);
+					fprintf(stderr, "%c", buffer[n]);
 				else
 					fprintf(stderr, ".");
 			}
@@ -134,8 +134,5 @@ void dump_buffer(const char *bname, const uint8_t *buffer, size_t blen)
 #else
 void dump_buffer(const char *bname, const uint8_t *buffer, size_t blen)
 {
-	(void)bname;
-	(void)buffer;
-	(void)blen;
 }
 #endif

@@ -642,7 +642,7 @@ TEEC_Result TEEC_OpenSession(TEEC_Context *ctx, TEEC_Session *session,
 	}
 
 	rc = ioctl(ctx->imp.fd, TEE_IOC_OPEN_SESSION, &buf_data);
-	if (rc) {
+	if (rc != 0) {
 		EMSG("TEE_IOC_OPEN_SESSION failed");
 		eorig = TEEC_ORIGIN_COMMS;
 		res = ioctl_errno_to_res(errno);
@@ -729,7 +729,7 @@ TEEC_Result TEEC_InvokeCommand(TEEC_Session *session, uint32_t cmd_id,
 	}
 
 	rc = ioctl(session->imp.ctx->imp.fd, TEE_IOC_INVOKE, &buf_data);
-	if (rc) {
+	if (rc != 0) {
 		EMSG("TEE_IOC_INVOKE failed");
 		eorig = TEEC_ORIGIN_COMMS;
 		res = ioctl_errno_to_res(errno);
